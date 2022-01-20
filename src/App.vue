@@ -7,7 +7,9 @@
       text-color="#fff"
       active-text-color="#ffd04b"
     >
-      <el-menu-item to="/" index="1">首頁</el-menu-item>
+      <el-menu-item index="1">
+        <router-link to="/">首頁</router-link>
+      </el-menu-item>
       <el-sub-menu index="2">
         <template #title>英雄</template>
         <el-menu-item index="2-1">上路</el-menu-item>
@@ -29,7 +31,7 @@
   <router-view></router-view>
 </template>
 
-<style>
+<style scoped>
 @import url(./assets/Normalize.css);
 .el-menu {
   padding: 10px;
@@ -46,5 +48,8 @@
   width: 100%;
   height: 200px;
   background: url("./assets/defaultbanner.jpg") center no-repeat;
+}
+.el-menu-item a {
+  text-decoration: none;
 }
 </style>

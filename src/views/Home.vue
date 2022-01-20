@@ -1,15 +1,20 @@
 <template>
-  <Hero />
+  <Champions />
 </template>
 
 <script>
 // @ is an alias to /src
-import Hero from "@/components/Hero.vue";
-
+import Champions from "@/components/Champions.vue";
+import { ref } from "vue";
 export default {
   name: "Home",
   components: {
-    Hero,
+    Champions,
+  },
+  setup() {
+    const data = ref([]);
+
+    return { data };
   },
 };
 </script>
