@@ -16,7 +16,7 @@
       <span>輔助</span>
       <span>法師</span>
     </div>
-    <Champion />
+    <Champion :champions="champions" />
   </div>
 </template>
 
@@ -26,6 +26,7 @@ import { Search } from "@element-plus/icons-vue";
 import Champion from "./Champion.vue";
 export default {
   name: "Champions",
+  props: ["champions"],
   components: {
     Champion,
   },

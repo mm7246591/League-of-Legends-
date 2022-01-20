@@ -1,5 +1,5 @@
 <template>
-  <Champions />
+  <Champions :champions="champions" />
 </template>
 
 <script>
@@ -12,9 +12,21 @@ export default {
     Champions,
   },
   setup() {
-    const data = ref([]);
-
-    return { data };
+    const champions = ref([]);
+    const error = ref(null);
+    const getChampion = async () => {
+      try {
+        let data = await fetch("http://localhost:3000/champions");
+        if (!data) {
+          throw Error("NO Data Available");
+        }
+        champions.value = await data.json();
+      } catch (err) {
+        error.value = err.message;
+      }
+    };
+    getChampion();
+    return { champions, error, getChampion };
   },
 };
 </script>

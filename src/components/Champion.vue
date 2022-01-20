@@ -1,52 +1,12 @@
 <template>
   <div class="championItems">
-    <div class="box">
+    <div class="box" v-for="champion of champions" :key="champion.id">
       <div class="img">
-        <a href=""><img src="https://picsum.photos/280/300" alt="" /></a>
+        <a :href="champion.name"><img :src="champion.img" alt="" /></a>
       </div>
-      <div class="text"><span>123</span></div>
-    </div>
-    <div class="box">
-      <div class="img">
-        <a href=""><img src="https://picsum.photos/280/300" alt="" /></a>
+      <div class="text">
+        <span>{{ champion.name }}</span>
       </div>
-      <div class="text"><span>123</span></div>
-    </div>
-    <div class="box">
-      <div class="img">
-        <a href=""><img src="https://picsum.photos/280/300" alt="" /></a>
-      </div>
-      <div class="text"><span>123</span></div>
-    </div>
-    <div class="box">
-      <div class="img">
-        <a href=""><img src="https://picsum.photos/280/300" alt="" /></a>
-      </div>
-      <div class="text"><span>123</span></div>
-    </div>
-    <div class="box">
-      <div class="img">
-        <a href=""><img src="https://picsum.photos/280/300" alt="" /></a>
-      </div>
-      <div class="text"><span>123</span></div>
-    </div>
-    <div class="box">
-      <div class="img">
-        <a href=""><img src="https://picsum.photos/280/300" alt="" /></a>
-      </div>
-      <div class="text"><span>123</span></div>
-    </div>
-    <div class="box">
-      <div class="img">
-        <a href=""><img src="https://picsum.photos/280/300" alt="" /></a>
-      </div>
-      <div class="text"><span>123</span></div>
-    </div>
-    <div class="box">
-      <div class="img">
-        <a href=""><img src="https://picsum.photos/280/300" alt="" /></a>
-      </div>
-      <div class="text"><span>123</span></div>
     </div>
   </div>
 </template>
@@ -54,6 +14,7 @@
 <script>
 export default {
   name: "Champion",
+  props: ["champions"],
 };
 </script>
 
@@ -72,6 +33,10 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.img img {
+  width: 287px;
+  height: 300px;
 }
 .box .text {
   width: 100%;
