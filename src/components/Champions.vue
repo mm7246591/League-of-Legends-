@@ -15,7 +15,6 @@
       <span @click="Assassins">刺客</span>
       <span @click="Support">輔助</span>
       <span @click="Mages">法師</span>
-      <el-icon><filter /></el-icon>
     </div>
     <Champion :champions="champions" :character="character" :input="input" />
   </div>
@@ -23,7 +22,7 @@
 
 <script>
 import { ref } from "vue";
-import { Search, filter } from "@element-plus/icons-vue";
+import { Search } from "@element-plus/icons-vue";
 import Champion from "./Champion.vue";
 export default {
   name: "Champions",
@@ -33,11 +32,12 @@ export default {
   },
   setup() {
     const input = ref("");
-    return { input, Search, filter };
+    return { input, Search };
   },
   data() {
     return {
       character: "",
+      isSort: false,
     };
   },
   methods: {
@@ -77,10 +77,11 @@ export default {
 }
 .search {
   width: 100%;
-  height: 80px;
   line-height: 80px;
   margin: 20px 0;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: black;
   background: linear-gradient(
         to left bottom,
@@ -115,10 +116,11 @@ export default {
   right: 0%;
   left: 0%;
 }
-.el-icon filter {
-  width: 20px;
+.icon {
+  width: 40px;
   height: 20px;
+  line-height: 20px;
   color: white;
-  background-color: #58a;
+  cursor: pointer;
 }
 </style>
