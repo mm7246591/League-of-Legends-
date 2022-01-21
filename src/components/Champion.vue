@@ -2,7 +2,7 @@
   <div class="championItems">
     <div class="box" v-for="champion of searchEvent" :key="champion.id">
       <div class="img">
-        <a :href="champion.name"><img :src="champion.img" alt="" /></a>
+        <a :href="champion.name"><img :src="`${champion.img}`" alt="" /></a>
       </div>
       <div class="text">
         <span>{{ champion.name }}</span>
@@ -47,21 +47,31 @@ export default {
 }
 .box {
   width: 280px;
-  height: 350px;
-  margin: 0 10px;
+  height: 334.5px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: 0.25s linear;
+}
+.box .img {
+  width: 287px;
+  height: 300px;
 }
 .img img {
   width: 287px;
   height: 300px;
 }
 .box .text {
-  width: 100%;
+  width: 287px;
   color: white;
   background-color: black;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 30px;
+}
+.box :hover.img img {
+  transform: scale(1.1);
 }
 </style>
