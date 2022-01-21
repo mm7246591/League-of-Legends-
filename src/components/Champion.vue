@@ -1,6 +1,6 @@
 <template>
   <div class="championItems">
-    <div class="box" v-for="champion of champions" :key="champion.id">
+    <div class="box" v-for="champion of searchEvent" :key="champion.id">
       <div class="img">
         <a :href="champion.name"><img :src="champion.img" alt="" /></a>
       </div>
@@ -12,9 +12,28 @@
 </template>
 
 <script>
+import { computed } from "@vue/runtime-core";
 export default {
   name: "Champion",
-  props: ["champions"],
+  props: ["champions", "character", "input"],
+  setup(props) {
+    const searchEvent = computed(() => {
+      if (props.input.length > 0) {
+        return props.champions.filter((champion) =>
+          champion.name.includes(props.input)
+        );
+      } else if (props.character.length > 0) {
+        if (props.character === "全部") {
+          return props.champions;
+        }
+        return props.champions.filter((champion) =>
+          champion.character.includes(props.character)
+        );
+      }
+      return props.champions;
+    });
+    return { searchEvent };
+  },
 };
 </script>
 

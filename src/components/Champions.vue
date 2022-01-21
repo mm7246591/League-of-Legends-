@@ -8,15 +8,15 @@
         :prefix-icon="Search"
       >
       </el-input>
-      <span>全部</span>
-      <span>射手</span>
-      <span>鬥士</span>
-      <span>坦克</span>
-      <span>刺客</span>
-      <span>輔助</span>
-      <span>法師</span>
+      <span @click="all">全部</span>
+      <span @click="Marksmen">射手</span>
+      <span @click="Fighters">鬥士</span>
+      <span @click="Tanks">坦克</span>
+      <span @click="Assassins">刺客</span>
+      <span @click="Support">輔助</span>
+      <span @click="Mages">法師</span>
     </div>
-    <Champion :champions="champions" />
+    <Champion :champions="champions" :character="character" :input="input" />
   </div>
 </template>
 
@@ -33,6 +33,34 @@ export default {
   setup() {
     const input = ref("");
     return { input, Search };
+  },
+  data() {
+    return {
+      character: "",
+    };
+  },
+  methods: {
+    all() {
+      this.character = "全部";
+    },
+    Marksmen() {
+      this.character = "射手";
+    },
+    Fighters() {
+      this.character = "鬥士";
+    },
+    Tanks() {
+      this.character = "坦克";
+    },
+    Assassins() {
+      this.character = "刺客";
+    },
+    Support() {
+      this.character = "輔助";
+    },
+    Mages() {
+      this.character = "法師";
+    },
   },
 };
 </script>
