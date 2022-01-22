@@ -5,7 +5,7 @@
 <script>
 // @ is an alias to /src
 import Champions from "@/components/Champions.vue";
-import getData from "../static/getData";
+import getChampion from "../static/getChampion";
 
 export default {
   name: "Home",
@@ -13,8 +13,8 @@ export default {
     Champions,
   },
   setup() {
-    const { champions, error, getChampion } = getData();
-    getChampion();
+    const { champions, error, getData } = getChampion();
+    getData();
     return { champions, error };
   },
 };

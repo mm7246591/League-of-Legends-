@@ -77,6 +77,7 @@ export default {
 }
 .search {
   width: 100%;
+  height: 80px;
   line-height: 80px;
   margin: 20px 0;
   display: flex;
@@ -108,7 +109,7 @@ export default {
   position: absolute;
   right: 50%;
   left: 50%;
-  bottom: -5px;
+  bottom: 25px;
   border-bottom: 1px solid white;
   transition: 0.3s;
 }

@@ -10,7 +10,9 @@
       <el-menu-item index="1">
         <router-link to="/">首頁</router-link>
       </el-menu-item>
-      <el-menu-item index="2"> 英雄 </el-menu-item>
+      <el-menu-item index="2">
+        <router-link to="/Championlist">英雄列表</router-link>
+      </el-menu-item>
       <el-menu-item index="4">區域</el-menu-item>
     </el-menu>
     <div class="backgroundImg">
@@ -22,8 +24,13 @@
 
 <style scoped>
 @import url(./assets/Normalize.css);
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Noto+Sans+TC:wght@100&family=Noto+Serif+TC:wght@200&display=swap");
 .el-menu {
   padding: 10px;
+  font-family: "Monoton", cursive;
+  font-family: "Noto Sans TC", sans-serif;
+  font-family: "Noto Serif TC", serif;
+  font-style: italic;
 }
 .el-sub-menu,
 .el-menu-item {

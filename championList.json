@@ -1,0 +1,463 @@
+{
+    "championList": [{
+        "id": 1,
+        "name": "亞歷斯塔",
+        "character": "Vanguard",
+        "date": "2009-02-21",
+        "version": "V11.11",
+        "Blue Essence": "1350",
+        "RP": "585",
+        "img": "champions/亞歷斯塔.jpg"
+    }, {
+        "id": 2,
+        "name": "安妮",
+        "character": "Burst",
+        "date": "2009-02-21",
+        "version": "V11.15",
+        "Blue Essence": "450",
+        "RP": "260",
+        "img": "champions/安妮.jpg"
+
+    }, {
+        "id": 3,
+        "name": "艾希",
+        "character": "Burst",
+        "date": "2009-02-21",
+        "version": "V11.15",
+        "Blue Essence": "450",
+        "RP": "260",
+        "img": "champions/艾希.jpg"
+    }, {
+        "id": 4,
+        "name": "費德提克",
+        "character": "Specialist",
+        "date": "2009-02-21",
+        "version": "V11.23",
+        "Blue Essence": "1350",
+        "RP": "585",
+        "img": "champions/費德提克.jpg"
+    }, {
+        "id": 5,
+        "name": "賈克斯",
+        "character": " Skirmisher",
+        "date": "2009-02-21",
+        "version": "V11.5",
+        "Blue Essence": "1350",
+        "RP": "585",
+        "img": "champions/賈克斯.jpg"
+    }, {
+        "id": 6,
+        "name": "凱爾",
+        "character": " Specialist",
+        "date": "2009-02-21",
+        "version": "V11.24",
+        "Blue Essence": "450",
+        "RP": "260",
+        "img": "champions/凱爾.jpg"
+    }, {
+        "id": 7,
+        "name": "易大師",
+        "character": "Skirmisher",
+        "date": "2009-02-21",
+        "version": "V11.11",
+        "Blue Essence": "450",
+        "RP": "260",
+        "img": "champions/易大師.jpg"
+    }, {
+        "id": 8,
+        "name": "魔甘娜",
+        "character": "Catcher",
+        "date": "2009-02-21",
+        "version": "V11.18",
+        "Blue Essence": "1350",
+        "RP": "585",
+        "img": "champions/魔甘娜.jpg"
+    }, {
+        "id": 9,
+        "name": "努努",
+        "character": "Vanguard",
+        "date": "2009-02-21",
+        "version": "V11.17",
+        "Blue Essence": "450",
+        "RP": "260",
+        "img": "champions/努努.jpg"
+    }, {
+        "id": 10,
+        "name": "雷茲",
+        "character": "Battlemage",
+        "date": "2009-02-21",
+        "version": "V11.15",
+        "Blue Essence": "450",
+        "RP": "260",
+        "img": "champions/雷茲.jpg"
+    }, {
+        "id": 11,
+        "name": "賽恩",
+        "character": " Vanguard",
+        "date": "2009-02-21",
+        "version": "V11.21",
+        "Blue Essence": "1350",
+        "RP": "585",
+        "img": "champions/賽恩.jpg"
+    }, {
+        "id": 12,
+        "name": "希維爾",
+        "character": "Marksman",
+        "date": "2009-02-21",
+        "version": "V11.16",
+        "Blue Essence": "450",
+        "RP": "260",
+        "img": "champions/希維爾.jpg"
+    }, {
+        "id": 13,
+        "name": "索拉卡",
+        "character": "Enchanter",
+        "date": "2009-02-21",
+        "version": "V11.19",
+        "Blue Essence": "450",
+        "RP": "260",
+        "img": "champions/索拉卡.jpg"
+    }, {
+        "id": 14,
+        "name": "提摩",
+        "character": "Specialist",
+        "date": "2009-02-21",
+        "version": "V11.21",
+        "Blue Essence": "1350",
+        "RP": "585",
+        "img": "champions/提摩.jpg"
+    }, {
+        "id": 15,
+        "name": "崔絲塔娜",
+        "character": "Marksman",
+        "date": "2009-02-21",
+        "version": "V12.2",
+        "Blue Essence": "1350",
+        "RP": "585",
+        "img": "champions/崔絲塔娜.jpg"
+    }, {
+        "id": 16,
+        "name": "逆命",
+        "character": "Burst",
+        "date": "2009-02-21",
+        "version": "V11.18",
+        "Blue Essence": "1350",
+        "RP": "585",
+        "img": "champions/逆命.jpg"
+    }, {
+        "id": 17,
+        "name": "沃維克",
+        "character": "Diver",
+        "date": "2009-02-21",
+        "version": "V11.21",
+        "Blue Essence": "450",
+        "RP": "260",
+        "img": "champions/沃維克.jpg"
+    }, {
+        "id": 18,
+        "name": "辛吉德",
+        "character": "Specialist",
+        "date": "2009-04-18",
+        "version": "V11.21",
+        "Blue Essence": "450",
+        "RP": "260",
+        "img": "champions/辛吉德.jpg"
+    }, {
+        "id": 19,
+        "name": "極靈",
+        "character": "Specialist",
+        "date": "2009-04-18",
+        "version": "V11.14",
+        "Blue Essence": "1350",
+        "RP": "585",
+        "img": "champions/極靈.jpg"
+    }, {
+        "id": 20,
+        "name": "伊芙琳",
+        "character": "Assassin",
+        "date": "2009-05-01",
+        "version": "V11.17",
+        "Blue Essence": "1350",
+        "RP": "585",
+        "img": "champions/伊芙琳.jpg"
+    }, {
+        "id": 21,
+        "name": "泰達米爾",
+        "character": "Skirmishert",
+        "date": "2009-05-01",
+        "version": "V11.23",
+        "Blue Essence": "1350",
+        "RP": "585",
+        "img": "champions/泰達米爾.jpg"
+    }, {
+        "id": 22,
+        "name": "圖奇",
+        "character": "Marksman",
+        "date": "2009-05-01",
+        "version": "V11.24",
+        "Blue Essence": "3150",
+        "RP": "790",
+        "img": "champions/圖奇.jpg"
+    }, {
+        "id": 23,
+        "name": "卡爾瑟斯",
+        "character": "Battlemage",
+        "date": "2009-06-12",
+        "version": "V12.2",
+        "Blue Essence": "3150",
+        "RP": "790",
+        "img": "champions/卡爾瑟斯.jpg"
+    }, {
+        "id": 24,
+        "name": "阿姆姆",
+        "character": "Vanguard",
+        "date": "2009-06-26",
+        "version": "V11.20",
+        "Blue Essence": "450",
+        "RP": "260",
+        "img": "champions/阿姆姆.jpg"
+    }, {
+        "id": 25,
+        "name": "科加斯",
+        "character": "Specialist",
+        "date": "2009-06-26",
+        "version": "V11.20",
+        "Blue Essence": "1350",
+        "RP": "585",
+        "img": "champions/科加斯.jpg"
+    }, {
+        "id": 26,
+        "name": "艾妮維亞",
+        "character": "Battlemage",
+        "date": "2009-07-10",
+        "version": "V11.20",
+        "Blue Essence": "3150",
+        "RP": "790",
+        "img": "champions/艾妮維亞.jpg"
+    }, {
+        "id": 27,
+        "name": "拉姆斯",
+        "character": "Vanguard",
+        "date": "2009-07-10",
+        "version": "V11.13",
+        "Blue Essence": "1350",
+        "RP": "585",
+        "img": "champions/拉姆斯.jpg"
+    }, {
+        "id": 28,
+        "name": "維迦",
+        "character": "Burst",
+        "date": "2009-07-24",
+        "version": "V12.2",
+        "Blue Essence": "1350",
+        "RP": "585",
+        "img": "champions/維迦.jpg"
+    }, {
+        "id": 29,
+        "name": "卡薩丁",
+        "character": "Assassin",
+        "date": "2009-08-07",
+        "version": "V11.24",
+        "Blue Essence": "3150",
+        "RP": "790",
+        "img": "champions/卡薩丁.jpg"
+    }, {
+        "id": 30,
+        "name": "剛普朗克",
+        "character": "Specialist",
+        "date": "2009-08-19",
+        "version": "V12.1",
+        "Blue Essence": "3150",
+        "RP": "790",
+        "img": "champions/剛普朗克.jpg"
+    }, {
+        "id": 31,
+        "name": "塔里克",
+        "character": "Enchanter、Warden",
+        "date": "2009-08-19",
+        "version": "V11.14",
+        "Blue Essence": "1350",
+        "RP": "585",
+        "img": "champions/塔里克.jpg"
+    }, {
+        "id": 32,
+        "name": "布里茨",
+        "character": "Catcher",
+        "date": "2009-09-02",
+        "version": "V11.21",
+        "Blue Essence": "3150",
+        "RP": "790",
+        "img": "champions/布里茨.jpg"
+    }, {
+        "id": 33,
+        "name": "蒙多醫生",
+        "character": "Juggernaut",
+        "date": "2009-09-02",
+        "version": "V11.24",
+        "Blue Essence": "450",
+        "RP": "260",
+        "img": "champions/蒙多醫生.jpg"
+    }, {
+        "id": 34,
+        "name": "珍娜",
+        "character": "Enchanter",
+        "date": "2009-09-02",
+        "version": "V12.2",
+        "Blue Essence": "1350",
+        "RP": "585",
+        "img": "champions/珍娜.jpg"
+    }, {
+        "id": 35,
+        "name": "墨菲特",
+        "character": "Vanguard",
+        "date": "2009-09-02",
+        "version": "V11.12",
+        "Blue Essence": "1350",
+        "RP": "585",
+        "img": "champions/墨菲特.jpg"
+    }, {
+        "id": 36,
+        "name": "庫奇",
+        "character": "Marksman",
+        "date": "2009-09-19",
+        "version": "V11.8",
+        "Blue Essence": "3150",
+        "RP": "790",
+        "img": "champions/庫奇.jpg"
+    }, {
+        "id": 37,
+        "name": "卡特蓮娜",
+        "character": "Assassin",
+        "date": "2009-09-19",
+        "version": "V11.10",
+        "Blue Essence": "3150",
+        "RP": "790",
+        "img": "champions/卡特蓮娜.jpg"
+    }, {
+        "id": 38,
+        "name": "納瑟斯",
+        "character": "Juggernaut",
+        "date": "2009-10-01",
+        "version": "V12.1",
+        "Blue Essence": "1350",
+        "RP": "585",
+        "img": "champions/納瑟斯.jpg"
+    }, {
+        "id": 39,
+        "name": "漢默丁格",
+        "character": "Specialist",
+        "date": "2009-10-10",
+        "version": "V12.1",
+        "Blue Essence": "3150",
+        "RP": "790",
+        "img": "champions/漢默丁格.jpg"
+    }, {
+        "id": 40,
+        "name": "薩科",
+        "character": "Assassin",
+        "date": "2009-10-10",
+        "version": "V12.1",
+        "Blue Essence": "3150",
+        "RP": "790",
+        "img": "champions/薩科.jpg"
+    }, {
+        "id": 41,
+        "name": "烏迪爾",
+        "character": "Juggernaut",
+        "date": "2009-12-02",
+        "version": "V11.20",
+        "Blue Essence": "1350",
+        "RP": "585",
+        "img": "champions/烏迪爾.jpg"
+    }, {
+        "id": 42,
+        "name": "奈德麗",
+        "character": "Specialist",
+        "date": "2009-12-17",
+        "version": "V11.15",
+        "Blue Essence": "3150",
+        "RP": "790",
+        "img": "champions/奈德麗.jpg"
+    }, {
+        "id": 43,
+        "name": "波比",
+        "character": "Warden",
+        "date": "2010-01-13",
+        "version": "V11.19",
+        "Blue Essence": "450",
+        "RP": "260",
+        "img": "champions/波比.jpg"
+    }, {
+        "id": 44,
+        "name": "古拉格斯",
+        "character": "Vanguard",
+        "date": "2010-02-02",
+        "version": "V11.19",
+        "Blue Essence": "3150",
+        "RP": "790",
+        "img": "champions/古拉格斯.jpg"
+    }, {
+        "id": 45,
+        "name": "潘森",
+        "character": "Diver",
+        "date": "2010-02-02",
+        "version": "V12.1",
+        "Blue Essence": "3150",
+        "RP": "790",
+        "img": "champions/潘森.jpg"
+    }, {
+        "id": 46,
+        "name": "魔鬥凱薩",
+        "character": "Juggernaut",
+        "date": "2010-02-24",
+        "version": "V11.19",
+        "Blue Essence": "1350",
+        "RP": "585",
+        "img": "champions/魔鬥凱薩.jpg"
+    }, {
+        "id": 47,
+        "name": "伊澤瑞爾",
+        "character": "Marksman",
+        "date": "2010-03-16",
+        "version": "V11.21",
+        "Blue Essence": "3150",
+        "RP": "790",
+        "img": "champions/伊澤瑞爾.jpg"
+    }, {
+        "id": 48,
+        "name": "慎",
+        "character": "Warden",
+        "date": "2010-03-24",
+        "version": "V12.2",
+        "Blue Essence": "3150",
+        "RP": "790",
+        "img": "champions/慎.jpg"
+    }, {
+        "id": 49,
+        "name": "凱能",
+        "character": "Specialist",
+        "date": "2010-04-08",
+        "version": "V11.19",
+        "Blue Essence": "4800",
+        "RP": "880",
+        "img": "champions/凱能.jpg"
+    }, {
+        "id": 50,
+        "name": "蓋倫",
+        "character": "Juggernaut",
+        "date": "2010-04-27",
+        "version": "V11.21",
+        "Blue Essence": "450",
+        "RP": "260",
+        "img": "champions/蓋倫.jpg"
+    }, {
+        "id": 51,
+        "name": "阿卡莉",
+        "character": "Assassin",
+        "date": "2010-05-11",
+        "version": "V11.22",
+        "Blue Essence": "3150",
+        "RP": "790",
+        "img": "champions/阿卡莉.jpg"
+    }]
+}

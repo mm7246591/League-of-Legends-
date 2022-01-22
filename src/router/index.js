@@ -1,15 +1,15 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
-import Top from "../views/Top.vue";
+import List from "../views/List.vue";
 const routes = [{
         path: "/",
         name: "Home",
         component: Home,
     },
     {
-        path: "/Top",
-        name: "Top",
-        component: Top,
+        path: "/championlist",
+        name: "List",
+        component: List,
     },
 ];
 

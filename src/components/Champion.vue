@@ -73,7 +73,8 @@ export default {
   align-items: center;
   font-size: 30px;
   overflow: hidden;
-  transition: 0.3s linear;
+  transition: 0.1s linear;
+  font-family: sans-serif;
 }
 .box :hover.img img {
   transform: scale(1.1);

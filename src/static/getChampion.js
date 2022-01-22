@@ -1,11 +1,11 @@
 import { ref } from "vue";
-const getData = () => {
+const getChampion = () => {
     const champions = ref([]);
     const error = ref(null);
-    const getChampion = async() => {
+    const getData = async() => {
         try {
             let data = await fetch("http://localhost:3000/champions");
-            if (!data) {
+            if (!data.ok) {
                 throw Error("NO Data Available");
             }
             champions.value = await data.json();
@@ -13,7 +13,7 @@ const getData = () => {
             error.value = err.message;
         }
     };
-    return { champions, error, getChampion };
+    return { champions, error, getData };
 };
 
-export default getData;
+export default getChampion;
