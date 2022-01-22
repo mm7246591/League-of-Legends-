@@ -47,32 +47,38 @@ export default {
   flex-wrap: wrap;
 }
 .box {
-  width: 280px;
-  height: 334.5px;
+  width: 240px;
+  height: 300px;
   margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: 0.25s linear;
+  transition: 0.3s ease-in-out;
 }
 .box .img {
-  width: 287px;
+  width: 240px;
   height: 300px;
+  overflow: hidden;
 }
 .img img {
-  width: 287px;
+  width: 240px;
   height: 300px;
 }
 .box .text {
-  width: 287px;
+  width: 240px;
   color: white;
   background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 30px;
+  overflow: hidden;
+  transition: 0.3s linear;
 }
 .box :hover.img img {
   transform: scale(1.1);
+}
+.box:hover .text {
+  background-color: #006680;
 }
 </style>

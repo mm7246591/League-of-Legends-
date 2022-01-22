@@ -68,7 +68,7 @@ export default {
 
 <style scoped>
 .content {
-  width: 1200px;
+  width: 1300px;
   height: 100vh;
   display: flex;
   flex-direction: column;
