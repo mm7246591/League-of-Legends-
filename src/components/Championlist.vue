@@ -21,51 +21,43 @@
     >
       <el-table-column prop="name" label="Champion" width="300px" sortable>
       </el-table-column>
-      <el-table-column prop="character" label="Classes" sortable>
+      <el-table-column
+        prop="character"
+        label="Classes"
+        sortable
+        :sort-method="sortClasses"
+      >
       </el-table-column>
       <el-table-column prop="date" label="Date" sortable> </el-table-column>
-      <el-table-column prop="version" label="Last changed" sortable>
+      <el-table-column prop="version" label="Last Changed" sortable>
       </el-table-column>
-      <el-table-column prop="Blue Essence" label="Blue Essence" sortable>
+      <el-table-column
+        prop="blueEssence"
+        label="Blue Essence"
+        sortable
+        :sort-method="sortblueEssence"
+      >
       </el-table-column>
       <el-table-column prop="RP" label="RP" sortable> </el-table-column>
     </el-table>
   </div>
 </template>
 <script>
-import { ref } from "vue";
+import getChampionlist from "../static/getChampionlist";
 export default {
   name: "Championlist",
-  //   data() {
-  //     return {
-  //       tableData: [],
-  //     };
-  //   },
-  //   mounted() {
-  //     fetch("http://localhost:4000/championList")
-  //       .then((res) => {
-  //         return res.json();
-  //       })
-  //       .then((data) => {
-  //         this.tableData = data;
-  //       });
-  //   },
   setup() {
-    const tableData = ref([]);
-    const error = ref(null);
-    const getChampionlist = async () => {
-      try {
-        let data = await fetch("http://localhost:4000/championList");
-        if (!data.ok) {
-          throw Error("NO Data Available");
-        }
-        tableData.value = await data.json();
-      } catch (err) {
-        error.value = err.message;
-      }
-    };
-    getChampionlist();
+    const { tableData, error, getData } = getChampionlist();
+    getData();
     return { tableData, error };
+  },
+  methods: {
+    sortblueEssence(obj1, obj2) {
+      return obj1.blueEssence - obj2.blueEssence;
+    },
+    sortClasses(obj1, obj2) {
+      return obj1.character - obj2.character;
+    },
   },
 };
 </script>

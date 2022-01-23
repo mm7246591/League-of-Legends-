@@ -1,7 +1,7 @@
 import { ref } from "vue";
+const champions = ref([]);
+const error = ref(null);
 const getChampion = () => {
-    const champions = ref([]);
-    const error = ref(null);
     const getData = async() => {
         try {
             let data = await fetch("http://localhost:3000/champions");
