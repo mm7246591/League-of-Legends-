@@ -1,15 +1,25 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import List from "../views/List.vue";
+import Region from "../views/Region.vue";
 const routes = [{
         path: "/",
         name: "Home",
         component: Home,
     },
     {
-        path: "/championlist",
+        path: "/list",
         name: "List",
         component: List,
+    },
+    {
+        path: "/region",
+        name: "Region",
+        component: Region,
+    },
+    {
+        path: "/:catchAll(.*)",
+        redirect: "/",
     },
 ];
 

@@ -4,7 +4,7 @@ const error = ref(null);
 const getChampionlist = () => {
     const getData = async() => {
         try {
-            let data = await fetch("http://localhost:4000/championList");
+            let data = await fetch("http://localhost:4000/championList/");
             if (!data.ok) {
                 throw Error("NO Data Available");
             }

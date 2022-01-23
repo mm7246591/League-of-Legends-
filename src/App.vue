@@ -11,9 +11,11 @@
         <router-link to="/">首頁</router-link>
       </el-menu-item>
       <el-menu-item index="2">
-        <router-link to="/Championlist">英雄列表</router-link>
+        <router-link :to="{ name: 'List' }">英雄列表</router-link>
       </el-menu-item>
-      <el-menu-item index="4">區域</el-menu-item>
+      <el-menu-item index="4"
+        ><router-link :to="{ name: 'Region' }">區域</router-link></el-menu-item
+      >
     </el-menu>
     <div class="backgroundImg">
       <div class="img"></div>

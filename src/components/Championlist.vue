@@ -19,6 +19,11 @@
         'font-size': '20px',
       }"
     >
+      <el-table-column prop="img" width="50px">
+        <template v-slot="scope">
+          <img :src="scope.row.img" />
+        </template>
+      </el-table-column>
       <el-table-column prop="name" label="Champion" width="300px" sortable>
       </el-table-column>
       <el-table-column
@@ -56,7 +61,7 @@ export default {
       return obj1.blueEssence - obj2.blueEssence;
     },
     sortClasses(obj1, obj2) {
-      return obj1.character - obj2.character;
+      return obj1.character.slice(0, 1) - obj2.character.slice(0, 1);
     },
   },
 };
