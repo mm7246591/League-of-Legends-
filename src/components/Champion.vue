@@ -65,7 +65,7 @@ export default {
   height: 300px;
 }
 .box .text {
-  width: 240px;
+  width: 100%;
   color: white;
   background-color: black;
   display: flex;
