@@ -5,7 +5,7 @@
 <script>
 import Championregion from "../components/Championregion.vue";
 export default {
-  name: "Area",
+  name: "Region",
   components: {
     Championregion,
   },

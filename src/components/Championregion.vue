@@ -1,8 +1,13 @@
 <template>
   <div class="content">
     <div class="region" v-for="region of regions" :key="region.name">
-      <div class="img">
-        <img :src="region.icon" alt="" />
+      <div
+        class="img"
+        :style="{
+          backgroundImage: `url(${region.backgroundImg})`,
+        }"
+      >
+        <a :href="region.name"><img :src="region.icon" alt="" /></a>
       </div>
       <div class="text">
         <span>{{ region.name }}</span>
@@ -26,27 +31,54 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Monoton&family=Noto+Sans+TC:wght@100&family=Noto+Serif+TC:wght@200&display=swap");
 .content {
-  width: 1200px;
+  width: 1300px;
   display: flex;
   flex-wrap: wrap;
   margin: auto;
   padding-top: 30px;
 }
 .region {
-  width: 280px;
-  height: 290px;
+  width: 305px;
+  height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 10px;
+  box-shadow: 5px 5px 10px black;
+  background-color: #010a13;
 }
+
 .img {
-  width: 280px;
-  height: 240px;
+  width: 305px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  opacity: 0.5;
+}
+.region :hover.img {
+  opacity: 100;
+}
+.img a {
+  width: 100%;
+  height: 100%;
 }
 .img img {
-  width: 280px;
-  height: 240px;
+  width: 50px;
+  height: 75px;
+  font-size: 25px;
+  transition: 0.5s ease-in-out;
+  position: absolute;
+  top: 70px;
+  left: 130px;
+  -webkit-filter: brightness(200%);
+}
+.region :hover.img img {
+  opacity: 0;
 }
 .text {
   width: 100%;
@@ -56,10 +88,10 @@ export default {
   align-items: center;
   background-color: #061e36;
   color: white;
-  font-size: 20px;
+  font-size: 25px;
   font-family: "Monoton", cursive;
   font-family: "Noto Sans TC", sans-serif;
   font-family: "Noto Serif TC", serif;
-  font-style: "italic";
+  font-style: italic;
 }
 </style>

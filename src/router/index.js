@@ -13,7 +13,7 @@ const routes = [{
         component: List,
     },
     {
-        path: "/region",
+        path: "/regions",
         name: "Region",
         component: Region,
     },
