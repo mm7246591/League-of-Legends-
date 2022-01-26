@@ -7,13 +7,16 @@
           backgroundImage: `url(${region.backgroundImg})`,
         }"
       >
-        <a :href="region.name"><img :src="region.icon" alt="" /></a>
+        <router-link :to="{ name: region.name, params: region.name }">
+          <img :src="region.icon" alt="" />
+        </router-link>
       </div>
       <div class="text">
         <span>{{ region.name }}</span>
       </div>
     </div>
   </div>
+  <router-view></router-view>
 </template>
 
 <script>
