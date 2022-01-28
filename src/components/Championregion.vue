@@ -7,7 +7,17 @@
           backgroundImage: `url(${region.backgroundImg})`,
         }"
       >
-        <router-link :to="{ name: 'Regiondetail', params: { name: region.name } }">
+        <router-link
+          :to="{
+            name: 'Regiondetail',
+            params: {
+              name: region.name,
+              backgroundImg: region.backgroundImg,
+              icon: region.icon,
+              text: region.text,
+            },
+          }"
+        >
           <img :src="region.icon" alt="" />
         </router-link>
       </div>

@@ -1,11 +1,20 @@
 <template>
-  <div>{{ name }}</div>
+  <div>{{ backgroundImg }}</div>
 </template>
 
 <script>
 export default {
   name: "Regiondetail",
-  props: ["name"],
+  props: ["name", "backgroundImg", "icon", "text"],
+  data() {
+    return {
+      Name: null,
+      Img: null,
+      Icon: null,
+      Text: null,
+      getPost: null,
+    };
+  },
 };
 </script>
 
