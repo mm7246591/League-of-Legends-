@@ -76,7 +76,6 @@ section {
 section p {
   width: 1000px;
   margin: 30px 0;
-  font-family: Beaufort for LOL, Arial, sans-serif;
   font-weight: 400;
   font-size: 20px;
   color: #c4b998;
