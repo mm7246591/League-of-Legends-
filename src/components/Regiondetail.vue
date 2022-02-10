@@ -1,12 +1,17 @@
 <template>
-  <article class="title">
-    <img src="../assets/伊克斯塔爾.png" alt />
+  <article
+    class="title"
+    :style="{
+      backgroundImage: `url(/${backgroundImg})`,
+    }"
+  >
+    <img :src="`/${icon}`" alt />
     <span class="text">{{ name }}</span>
     <img class="imgBar" src="../assets/t1HeaderDivider.png" alt="" />
   </article>
   <section>
     <p>
-      以擅長元素魔法而聞名的伊克斯塔爾，是首批加入蘇瑞瑪帝國的獨立國家之一。事實上，伊克斯塔爾的文化淵源更為久遠：當年那次向西的大遷徙，造就了包含伊克斯塔爾在內的諸多文明，如布爾魯、規模龐大的希利亞、奉行苦修的巨石峰等。這些文明很有可能與史上第一批至高戰士的誕生息息相關。伊克斯塔爾的法師曾先後在虛空、冥血族的侵襲下生還，靠的是對近鄰敬而遠之，以周遭的蠻荒之地為屏障。雖然已經失去了不少東西，他們仍奮力保存碩果僅存的文明……如今，在此隱匿叢林深處、與世隔絕上千年的城市「伊克薩奧肯」，已經擁有發展成熟的生態村落，而且一直以來幾乎不受外界影響。伊克斯塔爾人從遠方見證了天堂島的毀滅，以及隨之而來的符文聖戰。因此，他們視符文大地的其他陣營為新興勢力和覬覦權勢者，並運用自身強大法力來使外敵無法靠近。
+      {{ text }}
     </p>
   </section>
 </template>
@@ -26,7 +31,6 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url("../assets/伊克斯塔爾.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
