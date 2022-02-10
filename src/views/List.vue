@@ -1,5 +1,7 @@
 <template>
-  <Championlist />
+  <div>
+    <Championlist />
+  </div>
 </template>
 
 <script>
@@ -12,4 +14,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+div {
+  background-color: #060e1f;
+}
+</style>

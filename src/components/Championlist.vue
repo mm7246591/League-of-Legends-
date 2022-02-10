@@ -34,8 +34,7 @@
       >
       </el-table-column>
       <el-table-column prop="date" label="Date" sortable> </el-table-column>
-      <el-table-column prop="version" label="Last Changed" sortable>
-      </el-table-column>
+      <el-table-column prop="version" label="Last Changed" sortable> </el-table-column>
       <el-table-column
         prop="blueEssence"
         label="Blue Essence"
@@ -56,6 +55,15 @@ export default {
     getData();
     return { tableData, error };
   },
+  mounted() {
+    //去除hover效果
+    setTimeout(function () {
+      const obj = document.getElementsByClassName("el-table--enable-row-hover")[0];
+      let clz = obj.getAttribute("class");
+      clz = clz.replace("el-table--enable-row-hover", "");
+      obj.setAttribute("class", clz);
+    }, 1);
+  },
   methods: {
     sortblueEssence(obj1, obj2) {
       return obj1.blueEssence - obj2.blueEssence;
@@ -72,9 +80,5 @@ export default {
   width: 1300px;
   margin: auto;
   padding-top: 30px;
-}
-
-.el-table__row :hover > .el-table__cell {
-  background-color: rgb(0, 0, 0) !important;
 }
 </style>

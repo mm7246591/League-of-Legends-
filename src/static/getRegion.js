@@ -9,7 +9,9 @@ const getRegion = () => {
                 throw Error("NO Data Available");
             }
             regions.value = await data.json();
+            localStorage.setItem("name", JSON.stringify(regions.value));
         } catch (err) {
+            err.message = "NO Data Available";
             error.value = err.message;
         }
     };

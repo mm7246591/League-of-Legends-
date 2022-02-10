@@ -1,4 +1,5 @@
 <template>
+  <div v-if="error" class="error">{{ error }}</div>
   <div class="content">
     <div class="region" v-for="region of regions" :key="region.name">
       <div
@@ -105,5 +106,10 @@ export default {
   font-family: "Noto Sans TC", sans-serif;
   font-family: "Noto Serif TC", serif;
   font-style: italic;
+}
+.error {
+  text-align: center;
+  color: red;
+  font-size: 2rem;
 }
 </style>

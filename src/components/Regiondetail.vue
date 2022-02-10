@@ -1,25 +1,38 @@
 <template>
-  <article
-    class="title"
-    :style="{
-      backgroundImage: `url(/${backgroundImg})`,
-    }"
-  >
-    <img :src="`/${icon}`" alt />
-    <span class="text">{{ name }}</span>
-    <img class="imgBar" src="../assets/t1HeaderDivider.png" alt="" />
-  </article>
-  <section>
-    <p>
-      {{ text }}
-    </p>
-  </section>
+  <div v-for="region of regions" :key="region.name">
+    <article
+      class="title"
+      :style="{
+        backgroundImage: `url(/${region.backgroundImg})`,
+      }"
+    >
+      <img :src="`/${region.icon}`" alt />
+      <span class="text">{{ region.name }}</span>
+      <img class="imgBar" src="../assets/t1HeaderDivider.png" alt="" />
+    </article>
+    <section>
+      <p>
+        {{ region.text }}
+      </p>
+    </section>
+  </div>
 </template>
 
 <script>
 export default {
   name: "Regiondetail",
   props: ["name", "backgroundImg", "icon", "text"],
+  data() {
+    return {
+      regions: [],
+    };
+  },
+  mounted() {
+    this.regions = JSON.parse(localStorage.getItem("regions"));
+    this.regions = this.regions.filter((item) => {
+      return item.name === this.name;
+    });
+  },
 };
 </script>
 
