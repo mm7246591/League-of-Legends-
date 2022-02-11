@@ -2,7 +2,19 @@
   <div class="championItems">
     <div class="box" v-for="champion of searchEvent" :key="champion.id">
       <div class="img">
-        <a :href="champion.name"><img :src="`${champion.img}`" alt="" /></a>
+        <router-link
+          :to="{
+            name: 'Championdetail',
+            params: {
+              origin: champion.origin,
+              name: champion.name,
+              text: champion.text,
+              bigImg: champion.bigImg,
+            },
+          }"
+        >
+          <img :src="champion.img" alt="" />
+        </router-link>
       </div>
       <div class="text">
         <span>{{ champion.name }}</span>

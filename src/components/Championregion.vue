@@ -1,6 +1,6 @@
 <template>
   <div v-if="error" class="error">{{ error }}</div>
-  <div class="content">
+  <div class="content" v-else>
     <div class="region" v-for="region of regions" :key="region.name">
       <div
         class="img"

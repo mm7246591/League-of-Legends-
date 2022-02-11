@@ -1,257 +1,312 @@
 {
     "champions": [{
         "id": 1,
+        "origin": "牛頭酋長",
         "name": "亞歷斯塔",
+        "text": "身為令人畏懼的強大戰士 － 亞歷斯塔，替自己滅亡的氏族尋找向諾克薩斯討回血債的機會。雖然被奴役的他被迫過著鬥士般的生活，但他堅不可摧的意志使自己避免成為一個完全的野獸。現在，逃離了上一個主人的束縛枷鎖，他替那些飽受壓迫的下層社會人民戰鬥著，他滿腔的怒火以及他所擁有的堅韌之角、強勁之蹄將成為他為正義所戰的武器。",
         "character": "坦克、輔助",
-        "img": "champions/亞歷斯塔.jpg"
+        "img": "champions/亞歷斯塔.jpg",
+        "bigImg": "champions/亞歷斯塔圖.jpg"
     }, {
         "id": 2,
+        "origin": "黑暗之女",
         "name": "安妮",
+        "text": "安妮是一名擁有強大火燄之力的幼年法師。雖然危險，卻讓人不禁承認她的前途不可限量。她居住在諾克薩斯北方山脈的深處之中，在那裡隨處可見各種險惡生物及必須加以迴避的危險人物。然而即便如此，她擁有的力量依舊凌駕於他們之上。在安妮還是呱呱墜地的嬰孩時，她就因為突然爆發的情緒而展現出與火燄之間與生俱來的契合。不過幾年的時間，安妮已經可以完美地掌握這股力量。她最愛的玩伴是由她自己召喚出來的泰迪熊，她把牠取名叫作「泰貝爾」。泰貝爾的身體被毀滅之火包圍，為了安妮，牠可以消滅眼前所有阻撓他們的敵人。長年與外界沒有任何接觸的安妮早已迷失在永恆的純真童年之中，她總是在黑暗的森林深處徘徊，不斷地找尋下一個可以陪她玩耍的同伴。",
         "character": "法師",
-        "img": "champions/安妮.jpg"
+        "img": "champions/安妮.jpg",
+        "bigImg": "champions/安妮圖.jpg"
 
     }, {
         "id": 3,
+        "origin": "牛頭酋長",
         "name": "艾希",
         "character": "射手、輔助",
         "img": "champions/艾希.jpg"
     }, {
         "id": 4,
+        "origin": "牛頭酋長",
         "name": "費德提克",
         "character": "法師、輔助",
         "img": "champions/費德提克.jpg"
     }, {
         "id": 5,
+        "origin": "牛頭酋長",
         "name": "賈克斯",
         "character": "鬥士、刺客",
         "img": "champions/賈克斯.jpg"
     }, {
         "id": 6,
+        "origin": "牛頭酋長",
         "name": "凱爾",
         "character": "鬥士、輔助",
         "img": "champions/凱爾.jpg"
     }, {
         "id": 7,
+        "origin": "牛頭酋長",
         "name": "易大師",
         "character": "刺客、鬥士",
         "img": "champions/易大師.jpg"
     }, {
         "id": 8,
+        "origin": "牛頭酋長",
         "name": "魔甘娜",
         "character": "法師、輔助",
         "img": "champions/魔甘娜.jpg"
     }, {
         "id": 9,
+        "origin": "牛頭酋長",
         "name": "努努",
         "character": "坦克、鬥士",
         "img": "champions/努努.jpg"
     }, {
         "id": 10,
+        "origin": "牛頭酋長",
         "name": "雷茲",
         "character": "法師、鬥士",
         "img": "champions/雷茲.jpg"
     }, {
         "id": 11,
+        "origin": "牛頭酋長",
         "name": "賽恩",
         "character": "坦克、鬥士",
         "img": "champions/賽恩.jpg"
     }, {
         "id": 12,
+        "origin": "牛頭酋長",
         "name": "希維爾",
         "character": "射手",
         "img": "champions/希維爾.jpg"
     }, {
         "id": 13,
+        "origin": "牛頭酋長",
         "name": "索拉卡",
         "character": "輔助、法師",
         "img": "champions/索拉卡.jpg"
     }, {
         "id": 14,
+        "origin": "牛頭酋長",
         "name": "提摩",
         "character": "射手、刺客",
         "img": "champions/提摩.jpg"
     }, {
         "id": 15,
+        "origin": "牛頭酋長",
         "name": "崔絲塔娜",
         "character": "射手、刺客",
         "img": "champions/崔絲塔娜.jpg"
     }, {
         "id": 16,
+        "origin": "牛頭酋長",
         "name": "逆命",
         "character": "法師",
         "img": "champions/逆命.jpg"
     }, {
         "id": 17,
+        "origin": "牛頭酋長",
         "name": "沃維克",
         "character": "鬥士、坦克",
         "img": "champions/沃維克.jpg"
     }, {
         "id": 18,
+        "origin": "牛頭酋長",
         "name": "辛吉德",
         "character": "坦克、鬥士",
         "img": "champions/辛吉德.jpg"
     }, {
         "id": 19,
+        "origin": "牛頭酋長",
         "name": "極靈",
         "character": "輔助、法師",
         "img": "champions/極靈.jpg"
     }, {
         "id": 20,
+        "origin": "牛頭酋長",
         "name": "伊芙琳",
         "character": "刺客、法師",
         "img": "champions/伊芙琳.jpg"
     }, {
         "id": 21,
+        "origin": "牛頭酋長",
         "name": "泰達米爾",
         "character": "鬥士、刺客",
         "img": "champions/泰達米爾.jpg"
     }, {
         "id": 22,
+        "origin": "牛頭酋長",
         "name": "圖奇",
         "character": "射手、刺客",
         "img": "champions/圖奇.jpg"
     }, {
         "id": 23,
+        "origin": "牛頭酋長",
         "name": "卡爾瑟斯",
         "character": "法師",
         "img": "champions/卡爾瑟斯.jpg"
     }, {
         "id": 24,
+        "origin": "牛頭酋長",
         "name": "阿姆姆",
         "character": "坦克、法師",
         "img": "champions/阿姆姆.jpg"
     }, {
         "id": 25,
+        "origin": "牛頭酋長",
         "name": "科加斯",
         "character": "坦克、法師",
         "img": "champions/科加斯.jpg"
     }, {
         "id": 26,
+        "origin": "牛頭酋長",
         "name": "艾妮維亞",
         "character": "法師、輔助",
         "img": "champions/艾妮維亞.jpg"
     }, {
         "id": 27,
+        "origin": "牛頭酋長",
         "name": "拉姆斯",
         "character": "坦克、鬥士",
         "img": "champions/拉姆斯.jpg"
     }, {
         "id": 28,
+        "origin": "牛頭酋長",
         "name": "維迦",
         "character": "法師",
         "img": "champions/維迦.jpg"
     }, {
         "id": 29,
+        "origin": "牛頭酋長",
         "name": "卡薩丁",
         "character": "刺客、法師",
         "img": "champions/卡薩丁.jpg"
     }, {
         "id": 30,
+        "origin": "牛頭酋長",
         "name": "剛普朗克",
         "character": "鬥士",
         "img": "champions/剛普朗克.jpg"
     }, {
         "id": 31,
+        "origin": "牛頭酋長",
         "name": "塔里克",
         "character": "輔助、鬥士",
         "img": "champions/塔里克.jpg"
     }, {
         "id": 32,
+        "origin": "牛頭酋長",
         "name": "布里茨",
         "character": "坦克、鬥士",
         "img": "champions/布里茨.jpg"
     }, {
         "id": 33,
+        "origin": "牛頭酋長",
         "name": "蒙多醫生",
         "character": "坦克、鬥士",
         "img": "champions/蒙多醫生.jpg"
     }, {
         "id": 34,
+        "origin": "牛頭酋長",
         "name": "珍娜",
         "character": "輔助、法師",
         "img": "champions/珍娜.jpg"
     }, {
         "id": 35,
+        "origin": "牛頭酋長",
         "name": "墨菲特",
         "character": "坦克、鬥士",
         "img": "champions/墨菲特.jpg"
     }, {
         "id": 36,
+        "origin": "牛頭酋長",
         "name": "庫奇",
         "character": "射手",
         "img": "champions/庫奇.jpg"
     }, {
         "id": 37,
+        "origin": "牛頭酋長",
         "name": "卡特蓮娜",
         "character": "刺客、法師",
         "img": "champions/卡特蓮娜.jpg"
     }, {
         "id": 38,
+        "origin": "牛頭酋長",
         "name": "納瑟斯",
         "character": "鬥士、坦克",
         "img": "champions/納瑟斯.jpg"
     }, {
         "id": 39,
+        "origin": "牛頭酋長",
         "name": "漢默丁格",
         "character": "法師、輔助",
         "img": "champions/漢默丁格.jpg"
     }, {
         "id": 40,
+        "origin": "牛頭酋長",
         "name": "薩科",
         "character": "刺客",
         "img": "champions/薩科.jpg"
     }, {
         "id": 41,
+        "origin": "牛頭酋長",
         "name": "烏迪爾",
         "character": "鬥士、坦克",
         "img": "champions/烏迪爾.jpg"
     }, {
         "id": 42,
+        "origin": "牛頭酋長",
         "name": "奈德麗",
         "character": "刺客、法師",
         "img": "champions/奈德麗.jpg"
     }, {
         "id": 43,
+        "origin": "牛頭酋長",
         "name": "波比",
         "character": "坦克、鬥士",
         "img": "champions/波比.jpg"
     }, {
         "id": 44,
+        "origin": "牛頭酋長",
         "name": "古拉格斯",
         "character": "鬥士、法師",
         "img": "champions/古拉格斯.jpg"
     }, {
         "id": 45,
+        "origin": "牛頭酋長",
         "name": "潘森",
         "character": "鬥士、刺客",
         "img": "champions/潘森.jpg"
     }, {
         "id": 46,
+        "origin": "牛頭酋長",
         "name": "魔鬥凱薩",
         "character": "鬥士",
         "img": "champions/魔鬥凱薩.jpg"
     }, {
         "id": 47,
+        "origin": "牛頭酋長",
         "name": "伊澤瑞爾",
         "character": "射手、法師",
         "img": "champions/伊澤瑞爾.jpg"
     }, {
         "id": 48,
+        "origin": "牛頭酋長",
         "name": "慎",
         "character": "坦克",
         "img": "champions/慎.jpg"
     }, {
         "id": 49,
+        "origin": "牛頭酋長",
         "name": "凱能",
         "character": "法師、射手",
         "img": "champions/凱能.jpg"
     }, {
         "id": 50,
+        "origin": "牛頭酋長",
         "name": "蓋倫",
         "character": "鬥士、坦克",
         "img": "champions/蓋倫.jpg"
     }, {
         "id": 51,
+        "origin": "牛頭酋長",
         "name": "阿卡莉",
         "character": "刺客",
         "img": "champions/阿卡莉.jpg"
