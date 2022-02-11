@@ -65,7 +65,7 @@ export default {
   },
   mounted() {
     // remove hoverEvent
-    setTimeout(function () {
+    setTimeout(() => {
       const obj = document.getElementsByClassName("el-table--enable-row-hover")[0];
       let clz = obj.getAttribute("class");
       clz = clz.replace("el-table--enable-row-hover", "");
