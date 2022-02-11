@@ -52,25 +52,25 @@ export default {
   name: "Championlist",
   setup() {
     const { tableData, error, getData } = getChampionlist();
+    // sort
+    const sortblueEssence = (obj1, obj2) => {
+      return obj1.blueEssence - obj2.blueEssence;
+    };
+    // sort
+    const sortClasses = (obj1, obj2) => {
+      return obj1.character.slice(0, 1) - obj2.character.slice(0, 1);
+    };
     getData();
-    return { tableData, error };
+    return { tableData, error, sortblueEssence, sortClasses };
   },
   mounted() {
-    //去除hover效果
+    // remove hoverEvent
     setTimeout(function () {
       const obj = document.getElementsByClassName("el-table--enable-row-hover")[0];
       let clz = obj.getAttribute("class");
       clz = clz.replace("el-table--enable-row-hover", "");
       obj.setAttribute("class", clz);
     }, 1);
-  },
-  methods: {
-    sortblueEssence(obj1, obj2) {
-      return obj1.blueEssence - obj2.blueEssence;
-    },
-    sortClasses(obj1, obj2) {
-      return obj1.character.slice(0, 1) - obj2.character.slice(0, 1);
-    },
   },
 };
 </script>

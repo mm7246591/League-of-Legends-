@@ -19,19 +19,20 @@
 </template>
 
 <script>
+import { ref, onMounted } from "vue";
 export default {
   name: "Regiondetail",
   props: ["name", "backgroundImg", "icon", "text"],
-  data() {
-    return {
-      regions: [],
-    };
-  },
-  mounted() {
-    this.regions = JSON.parse(localStorage.getItem("regions"));
-    this.regions = this.regions.filter((item) => {
-      return item.name === this.name;
+  setup(props) {
+    const regions = ref([]);
+    // getItem and filter
+    onMounted(() => {
+      regions.value = JSON.parse(localStorage.getItem("regions"));
+      regions.value = regions.value.filter((item) => {
+        return item.name === props.name;
+      });
     });
+    return { regions, onMounted };
   },
 };
 </script>

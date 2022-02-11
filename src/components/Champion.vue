@@ -18,12 +18,10 @@ export default {
   props: ["champions", "character", "input"],
   setup(props) {
     const searchEvent = computed(() => {
-      // 判斷輸入的字
+      // check input value
       if (props.input.length > 0) {
-        return props.champions.filter((champion) =>
-          champion.name.includes(props.input)
-        );
-      } //判斷是點擊什麼職業
+        return props.champions.filter((champion) => champion.name.includes(props.input));
+      } // check character
       else if (props.character.length > 0) {
         if (props.character === "全部") {
           return props.champions;

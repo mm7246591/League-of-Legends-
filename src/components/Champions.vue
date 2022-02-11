@@ -1,12 +1,7 @@
 <template>
   <div class="content">
     <div class="search">
-      <el-input
-        v-model="input"
-        size="large"
-        placeholder="搜尋英雄"
-        :prefix-icon="Search"
-      >
+      <el-input v-model="input" size="large" placeholder="搜尋英雄" :prefix-icon="Search">
       </el-input>
       <span @click="all">全部</span>
       <span @click="Marksmen">射手</span>
@@ -32,36 +27,42 @@ export default {
   },
   setup() {
     const input = ref("");
-    return { input, Search };
-  },
-  data() {
-    return {
-      character: "",
-      isSort: false,
+    const character = ref("");
+    const isSort = ref(false);
+    const all = () => {
+      character.value = "全部";
     };
-  },
-  methods: {
-    all() {
-      this.character = "全部";
-    },
-    Marksmen() {
-      this.character = "射手";
-    },
-    Fighters() {
-      this.character = "鬥士";
-    },
-    Tanks() {
-      this.character = "坦克";
-    },
-    Assassins() {
-      this.character = "刺客";
-    },
-    Support() {
-      this.character = "輔助";
-    },
-    Mages() {
-      this.character = "法師";
-    },
+    const Marksmen = () => {
+      character.value = "射手";
+    };
+    const Fighters = () => {
+      character.value = "鬥士";
+    };
+    const Tanks = () => {
+      character.value = "坦克";
+    };
+    const Assassins = () => {
+      character.value = "刺客";
+    };
+    const Support = () => {
+      character.value = "輔助";
+    };
+    const Mages = () => {
+      character.value = "法師";
+    };
+    return {
+      input,
+      character,
+      isSort,
+      all,
+      Marksmen,
+      Fighters,
+      Tanks,
+      Assassins,
+      Support,
+      Mages,
+      Search,
+    };
   },
 };
 </script>
@@ -84,11 +85,7 @@ export default {
   justify-content: center;
   align-items: center;
   background-color: black;
-  background: linear-gradient(
-        to left bottom,
-        transparent 50%,
-        rgba(0, 0, 0, 0.4) 0
-      )
+  background: linear-gradient(to left bottom, transparent 50%, rgba(0, 0, 0, 0.4) 0)
       no-repeat 100% 0 / 1.4em 1.4em,
     linear-gradient(-135deg, transparent 1em, #58a 0);
 }
