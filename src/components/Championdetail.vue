@@ -10,7 +10,9 @@
     </div>
     <div class="origin">{{ champion.origin }}</div>
     <div class="name">{{ champion.name }}</div>
-    <div class="text">{{ champion.text }}</div>
+    <div class="text">
+      <p>{{ champion.text }}</p>
+    </div>
   </div>
 </template>
 
@@ -34,15 +36,15 @@ export default {
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Noto+Sans+TC:wght@100&family=Noto+Serif+TC:wght@200&display=swap");
 .content {
   width: 100%;
-  height: 800px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: auto;
   background-color: black;
-  position: relative;
 }
 .content .img {
   width: 100%;
@@ -84,24 +86,36 @@ export default {
 .content .origin {
   width: 1000px;
   color: #918f94;
-  font-size: 20px;
+  font-size: 1.3rem;
   text-align: center;
   line-height: 50px;
-  position: absolute;
-  bottom: 20%;
   z-index: 3;
+  margin-bottom: 10px;
 }
 .content .name {
   width: 1000px;
   color: white;
   font-size: 5rem;
+  font-weight: bold;
   text-align: center;
-  position: absolute;
-  bottom: 11%;
   z-index: 3;
 }
 .content .text {
   width: 1000px;
+  line-height: 1.5;
+  font-size: 1.3rem;
+  font-family: "Monoton", cursive;
+  font-family: "Noto Sans TC", sans-serif;
+  font-family: "Noto Serif TC", serif;
   color: white;
+  z-index: 3;
+  border-bottom: 1px solid #323943;
+  border-right: 1px solid #323943;
+  border-left: 1px solid #323943;
+  margin-bottom: 10px;
+}
+.text p {
+  padding: 0 50px;
+  margin-bottom: 10px;
 }
 </style>
