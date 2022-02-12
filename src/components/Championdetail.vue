@@ -42,26 +42,29 @@ export default {
   align-items: center;
   margin: auto;
   background-color: black;
-  color: white;
+  position: relative;
 }
 .content .img {
   width: 100%;
   height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 .content .img::before {
   content: "";
   background: linear-gradient(black 5%, transparent 10%) center center,
-    linear-gradient(to top, black 2%, transparent 15%) center center;
+    linear-gradient(to top, black 10%, transparent 15%) center center;
   position: absolute;
   width: 100%;
+  height: 100%;
   top: 0;
-  height: 500px;
 }
 .content .img::after {
   content: "";
   width: 100%;
-  height: 99%;
+  height: 100%;
   position: absolute;
   top: 0;
   right: 0;
@@ -70,14 +73,35 @@ export default {
   background: inherit;
   margin: auto;
   filter: blur(5px);
-  z-index: 2;
+  z-index: 1;
 }
 .img img {
-  width: 50%;
-  height: 600px;
+  width: 1000px;
+  height: 550px;
+  -webkit-mask-image: linear-gradient(#000 65%, transparent 98%);
+  z-index: 2;
+}
+.content .origin {
+  width: 1000px;
+  color: #918f94;
+  font-size: 20px;
+  text-align: center;
+  line-height: 50px;
   position: absolute;
-  top: 10%;
-  left: 25%;
+  bottom: 20%;
   z-index: 3;
+}
+.content .name {
+  width: 1000px;
+  color: white;
+  font-size: 5rem;
+  text-align: center;
+  position: absolute;
+  bottom: 11%;
+  z-index: 3;
+}
+.content .text {
+  width: 1000px;
+  color: white;
 }
 </style>
