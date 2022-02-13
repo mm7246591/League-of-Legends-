@@ -7,6 +7,6 @@
 
 #### I use 3 .json to store data
 
-# champions -p 3000
-# championList -p 4000
-# region -p 5000
+* champions -p 3000
+* championList -p 4000
+* region -p 5000
