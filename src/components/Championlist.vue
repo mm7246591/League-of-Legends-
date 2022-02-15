@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <el-table
-      :data="tableData"
+      :data="championlist"
       :header-cell-style="{
         'background-color': '#092949',
         color: 'white',
@@ -47,11 +47,19 @@
   </div>
 </template>
 <script>
-import getChampionlist from "../static/getChampionlist";
+import db from "../firebase/firebase";
+import { ref as dref, onValue } from "firebase/database";
+import { ref, onMounted } from "vue";
 export default {
   name: "Championlist",
   setup() {
-    const { tableData, error, getData } = getChampionlist();
+    const championlist = ref([]);
+    onMounted(() => {
+      const getData = dref(db, "championList");
+      onValue(getData, (data) => {
+        championlist.value = data.val();
+      });
+    });
     // sort
     const sortblueEssence = (obj1, obj2) => {
       return obj1.blueEssence - obj2.blueEssence;
@@ -60,8 +68,7 @@ export default {
     const sortClasses = (obj1, obj2) => {
       return obj1.character.slice(0, 1) - obj2.character.slice(0, 1);
     };
-    getData();
-    return { tableData, error, sortblueEssence, sortClasses };
+    return { championlist, sortblueEssence, sortClasses };
   },
   mounted() {
     // remove hoverEvent

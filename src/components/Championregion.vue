@@ -1,6 +1,5 @@
 <template>
-  <div v-if="error" class="error">{{ error }}</div>
-  <div class="content" v-else>
+  <div class="content">
     <div class="region" v-for="region of regions" :key="region.name">
       <div
         class="img"
@@ -30,13 +29,20 @@
 </template>
 
 <script>
-import getRegion from "../static/getRegion";
+import db from "../firebase/firebase";
+import { ref as dref, onValue } from "firebase/database";
+import { ref, onMounted } from "vue";
 export default {
   name: "Championregion",
   setup() {
-    const { regions, error, getData } = getRegion();
-    getData();
-    return { regions, error };
+    const regions = ref([]);
+    onMounted(() => {
+      const getData = dref(db, "regions");
+      onValue(getData, (data) => {
+        regions.value = data.val();
+      });
+    });
+    return { regions, onMounted };
   },
 };
 </script>
@@ -106,10 +112,5 @@ export default {
   font-family: "Noto Sans TC", sans-serif;
   font-family: "Noto Serif TC", serif;
   font-style: italic;
-}
-.error {
-  text-align: center;
-  color: red;
-  font-size: 2rem;
 }
 </style>

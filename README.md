@@ -1,12 +1,10 @@
-#  -:star2: It's about League-of-Legends-illustrated book
+#  -:star2: It's about League-of-Legends-illustrated book with vue3.js+firebase 9
 
-## Geting started
+## Project Setup
 
 * vue create vue-project
-* npm install json-server
+* npm install firebase
+* create serve https://firebase.google.com/
 
-#### I use 3 .json to store data
-
-* champions -p 3000
-* championList -p 4000
-* region -p 5000
+## Geting started
+* npm run serve

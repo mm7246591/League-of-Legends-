@@ -5,7 +5,9 @@
 <script>
 // @ is an alias to /src
 import Champions from "@/components/Champions.vue";
-import getChampion from "../static/getChampion";
+import db from "../firebase/firebase";
+import { ref as dref, onValue } from "firebase/database";
+import { ref, onMounted } from "vue";
 
 export default {
   name: "Home",
@@ -13,9 +15,14 @@ export default {
     Champions,
   },
   setup() {
-    const { champions, error, getData } = getChampion();
-    getData();
-    return { champions, error };
+    const champions = ref([]);
+    onMounted(() => {
+      const getData = dref(db, "champions");
+      onValue(getData, (data) => {
+        champions.value = data.val();
+      });
+    });
+    return { champions, onMounted };
   },
 };
 </script>
