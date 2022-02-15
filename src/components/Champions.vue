@@ -3,13 +3,15 @@
     <div class="search">
       <el-input v-model="input" size="large" placeholder="搜尋英雄" :prefix-icon="Search">
       </el-input>
-      <span @click="all">全部</span>
-      <span @click="Marksmen">射手</span>
-      <span @click="Fighters">鬥士</span>
-      <span @click="Tanks">坦克</span>
-      <span @click="Assassins">刺客</span>
-      <span @click="Support">輔助</span>
-      <span @click="Mages">法師</span>
+      <div class="character">
+        <span @click="all">全部</span>
+        <span @click="Marksmen">射手</span>
+        <span @click="Fighters">鬥士</span>
+        <span @click="Tanks">坦克</span>
+        <span @click="Assassins">刺客</span>
+        <span @click="Support">輔助</span>
+        <span @click="Mages">法師</span>
+      </div>
     </div>
     <Champion :champions="champions" :character="character" :input="input" />
   </div>
@@ -69,7 +71,7 @@ export default {
 
 <style scoped>
 .content {
-  width: 1300px;
+  max-width: 1300px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -89,19 +91,33 @@ export default {
       no-repeat 100% 0 / 1.4em 1.4em,
     linear-gradient(-135deg, transparent 1em, #58a 0);
 }
+
 .el-input {
   width: 300px;
   margin-right: 50px;
+  margin-left: 10px;
 }
-
-.search span {
+.el-input--large .el-input__inner {
+  height: 0;
+}
+.character {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.character span {
   font-size: 20px;
   margin: 0 10px;
   color: white;
   cursor: pointer;
   position: relative;
 }
-.search span::after {
+.character span:hover::after {
+  right: 0%;
+  left: 0%;
+}
+.character span::after {
   content: " ";
   position: absolute;
   right: 50%;
@@ -110,15 +126,61 @@ export default {
   border-bottom: 1px solid white;
   transition: 0.3s;
 }
-.search span:hover::after {
-  right: 0%;
-  left: 0%;
-}
+
 .icon {
   width: 40px;
   height: 20px;
   line-height: 20px;
   color: white;
   cursor: pointer;
+}
+@media (max-width: 779px) {
+  .search {
+    height: 150px;
+    flex-direction: column;
+  }
+  .el-input {
+    margin: 10px 0;
+  }
+  .character span {
+    height: 60px;
+    line-height: 60px;
+  }
+  .character span::after {
+    bottom: 15px;
+  }
+  .championItems {
+    justify-content: center;
+  }
+}
+@media (max-width: 517px) {
+  .championItems {
+    justify-content: center;
+  }
+}
+@media (max-width: 419px) {
+  .championItems {
+    height: 500px;
+  }
+  .search {
+    height: 200px;
+  }
+  .character {
+    width: 100%;
+    height: 100%;
+    align-items: flex-start;
+  }
+  .character span {
+    width: 100%;
+    height: 100%;
+  }
+  .character span:hover::after {
+    right: 25%;
+    left: -10%;
+  }
+  .character span::after {
+    right: 50%;
+    left: 50%;
+  }
 }
 </style>
