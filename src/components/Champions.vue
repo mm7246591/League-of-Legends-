@@ -149,15 +149,8 @@ export default {
   .character span::after {
     bottom: 15px;
   }
-  .championItems {
-    justify-content: center;
-  }
 }
-@media (max-width: 517px) {
-  .championItems {
-    justify-content: center;
-  }
-}
+
 @media (max-width: 419px) {
   .championItems {
     height: 500px;
@@ -181,6 +174,7 @@ export default {
   .character span::after {
     right: 50%;
     left: 50%;
+    bottom: 30px;
   }
 }
 </style>

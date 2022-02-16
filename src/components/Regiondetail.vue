@@ -39,7 +39,7 @@ export default {
 
 <style scoped>
 .title {
-  width: 100%;
+  max-width: 100%;
   height: 1000px;
   display: flex;
   flex-direction: column;
@@ -94,6 +94,7 @@ section {
 section p {
   width: 1000px;
   margin: 30px 0;
+  padding: 0 15px;
   font-weight: 400;
   font-size: 20px;
   color: #c4b998;
@@ -102,5 +103,14 @@ section p {
 section p::first-letter {
   font-size: 4rem;
   border-bottom: 3px solid rgb(203, 172, 98);
+}
+@media (max-width: 530px) {
+  .title img {
+    width: 150px;
+    height: 150px;
+  }
+  .title .text {
+    font-size: 70px;
+  }
 }
 </style>

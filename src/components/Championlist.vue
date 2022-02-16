@@ -24,7 +24,7 @@
           <img :src="scope.row.img" />
         </template>
       </el-table-column>
-      <el-table-column prop="name" label="Champion" width="300px" sortable>
+      <el-table-column prop="name" width="300px" label="Champion" sortable>
       </el-table-column>
       <el-table-column
         prop="character"
@@ -84,8 +84,9 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Monoton&family=Noto+Sans+TC:wght@100&family=Noto+Serif+TC:wght@200&display=swap");
 .content {
-  width: 1300px;
+  max-width: 1300px;
   margin: auto;
   padding-top: 30px;
+  overflow: auto;
 }
 </style>

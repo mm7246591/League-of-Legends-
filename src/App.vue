@@ -13,7 +13,7 @@
       <el-menu-item index="2">
         <router-link :to="{ name: 'List' }">英雄列表</router-link>
       </el-menu-item>
-      <el-menu-item index="4"
+      <el-menu-item index="3"
         ><router-link :to="{ name: 'Region' }">區域</router-link></el-menu-item
       >
     </el-menu>
@@ -36,7 +36,6 @@
 }
 .el-sub-menu,
 .el-menu-item {
-  text-align: center;
   --el-menu-item-font-size: var(--el-font-size-extra-large);
 }
 .backgroundImg {
@@ -48,6 +47,7 @@
   background: url("./assets/defaultbanner.jpg") center no-repeat;
 }
 a {
+  width: 100%;
   text-decoration: none;
   color: white;
 }

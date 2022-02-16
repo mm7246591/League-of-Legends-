@@ -50,29 +50,25 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Monoton&family=Noto+Sans+TC:wght@100&family=Noto+Serif+TC:wght@200&display=swap");
 .content {
-  width: 1300px;
-  display: flex;
-  flex-wrap: wrap;
+  max-width: 1300px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin: auto;
+  justify-items: center;
+  gap: 20px;
   padding-top: 30px;
 }
 .region {
-  width: 305px;
+  width: 100%;
   height: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin: 10px;
   box-shadow: 5px 5px 10px black;
   background-color: #010a13;
 }
 
 .img {
-  width: 305px;
+  width: 100%;
   height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -83,17 +79,18 @@ export default {
   opacity: 100;
 }
 .img a {
+  display: inline-block;
   width: 100%;
   height: 100%;
 }
 .img img {
-  width: 50px;
+  width: 60px;
   height: 75px;
   font-size: 25px;
   transition: 0.5s ease-in-out;
   position: absolute;
-  top: 70px;
-  left: 130px;
+  top: 30%;
+  left: 43%;
   -webkit-filter: brightness(200%);
 }
 .region :hover.img img {
@@ -112,5 +109,14 @@ export default {
   font-family: "Noto Sans TC", sans-serif;
   font-family: "Noto Serif TC", serif;
   font-style: italic;
+}
+@media (max-width: 1260px) {
+  .content {
+    margin: 0 10px;
+  }
+  .img img {
+    top: 35%;
+    left: 45%;
+  }
 }
 </style>

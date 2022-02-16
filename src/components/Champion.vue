@@ -53,8 +53,9 @@ export default {
 .championItems {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center;
 }
 .box {
   width: 240px;
