@@ -55,24 +55,25 @@ export default {
   height: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
   justify-items: center;
 }
 .box {
-  width: 240px;
+  width: 250px;
   height: 300px;
-  margin: 10px;
+  margin: 10px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: 0.3s ease-in-out;
 }
 .box .img {
-  width: 240px;
+  width: 250px;
   height: 300px;
   overflow: hidden;
 }
 .img img {
-  width: 240px;
+  width: 250px;
   height: 300px;
 }
 .box .text {

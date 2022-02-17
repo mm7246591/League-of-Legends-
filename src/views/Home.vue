@@ -20,6 +20,7 @@ export default {
       const getData = dref(db, "champions");
       onValue(getData, (data) => {
         champions.value = data.val();
+        localStorage.setItem("champions", JSON.stringify(champions.value));
       });
     });
     return { champions, onMounted };

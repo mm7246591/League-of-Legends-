@@ -86,7 +86,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
   background: linear-gradient(to left bottom, transparent 50%, rgba(0, 0, 0, 0.4) 0)
       no-repeat 100% 0 / 1.4em 1.4em,
     linear-gradient(-135deg, transparent 1em, #58a 0);

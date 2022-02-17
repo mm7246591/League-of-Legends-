@@ -40,6 +40,7 @@ export default {
       const getData = dref(db, "regions");
       onValue(getData, (data) => {
         regions.value = data.val();
+        localStorage.setItem("regions", JSON.stringify(regions.value));
       });
     });
     return { regions, onMounted };
