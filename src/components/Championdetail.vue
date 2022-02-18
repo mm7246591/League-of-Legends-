@@ -13,7 +13,6 @@
           backgroundImage: `url(${champion.bigImg})`,
         }"
       ></div>
-      <!-- <img :src="champion.bigImg" alt="" /> -->
     </div>
     <div class="origin">{{ champion.origin }}</div>
     <div class="name">{{ champion.name }}</div>
@@ -80,49 +79,7 @@ export default {
   background-repeat: no-repeat;
   overflow: hidden;
   z-index: 2;
-  /* height: 5.8rem;
-  margin: 0 0.6rem;
-  -webkit-mask-image: linear-gradient(#000 65%, transparent 98%);
-  background-size: cover !important;
-  background-position: 50% !important;
-  overflow: hidden; */
-  /* background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative; */
 }
-/* .content .img::before {
-  content: "";
-  background: linear-gradient(black 5%, transparent 10%) center center,
-    linear-gradient(to top, black 10%, transparent 15%) center center;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-}
-.content .img::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: inherit;
-  margin: auto;
-  filter: blur(5px);
-  z-index: 1;
-}
-.img img {
-  width: 1000px;
-  height: 550px;
-  -webkit-mask-image: linear-gradient(#000 65%, transparent 98%);
-  z-index: 2;
-} */
 .content .origin {
   width: 1000px;
   color: #918f94;
