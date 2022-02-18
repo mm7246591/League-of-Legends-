@@ -68,9 +68,6 @@ export default {
     const sortClasses = (obj1, obj2) => {
       return obj1.character.slice(0, 1) - obj2.character.slice(0, 1);
     };
-    return { championlist, sortblueEssence, sortClasses };
-  },
-  mounted() {
     // remove hoverEvent
     setTimeout(() => {
       const obj = document.getElementsByClassName("el-table--enable-row-hover")[0];
@@ -78,6 +75,7 @@ export default {
       clz = clz.replace("el-table--enable-row-hover", "");
       obj.setAttribute("class", clz);
     }, 1);
+    return { championlist, sortblueEssence, sortClasses };
   },
 };
 </script>
