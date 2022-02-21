@@ -40,6 +40,7 @@
         label="Blue Essence"
         sortable
         :sort-method="sortblueEssence"
+        id="icon"
       >
       </el-table-column>
       <el-table-column prop="RP" label="RP" sortable> </el-table-column>
