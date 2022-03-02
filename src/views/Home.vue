@@ -16,6 +16,7 @@ export default {
   },
   setup() {
     const champions = ref([]);
+
     onMounted(() => {
       const getData = dref(db, "champions");
       onValue(getData, (data) => {

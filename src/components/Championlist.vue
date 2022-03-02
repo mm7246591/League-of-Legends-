@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <el-table
-      :data="championlist"
+      :data="pageData"
       :header-cell-style="{
         'background-color': '#092949',
         color: 'white',
@@ -45,22 +45,41 @@
       </el-table-column>
       <el-table-column prop="RP" label="RP" sortable> </el-table-column>
     </el-table>
+    <el-pagination
+      :page-zize="pageSize"
+      :pager-count="11"
+      layout="prev,pager,next"
+      :total="championlist.length"
+      @current-change="setPage"
+    >
+    </el-pagination>
   </div>
 </template>
 <script>
 import db from "../firebase/firebase";
 import { ref as dref, onValue } from "firebase/database";
-import { ref, onMounted } from "vue";
+import { ref, onMounted, computed } from "vue";
 export default {
   name: "Championlist",
   setup() {
     const championlist = ref([]);
+    const page = ref(1);
+    const pageSize = ref(10);
     onMounted(() => {
       const getData = dref(db, "championList");
       onValue(getData, (data) => {
         championlist.value = data.val();
       });
     });
+    const pageData = computed(() => {
+      return championlist.value.slice(
+        pageSize.value * page.value - pageSize.value,
+        pageSize.value * page.value
+      );
+    });
+    const setPage = (val) => {
+      page.value = val;
+    };
     // sort
     const sortblueEssence = (obj1, obj2) => {
       return obj1.blueEssence - obj2.blueEssence;
@@ -76,7 +95,15 @@ export default {
       clz = clz.replace("el-table--enable-row-hover", "");
       obj.setAttribute("class", clz);
     }, 1);
-    return { championlist, sortblueEssence, sortClasses };
+    return {
+      page,
+      pageSize,
+      championlist,
+      pageData,
+      setPage,
+      sortblueEssence,
+      sortClasses,
+    };
   },
 };
 </script>
@@ -86,6 +113,18 @@ export default {
   max-width: 1300px;
   margin: auto;
   padding-top: 30px;
-  overflow: auto;
+  overflow: hidden;
+}
+.el-pagination {
+  text-align: center;
+  --el-pagination-font-size: 20px;
+  --el-pagination-text-color: white;
+  --el-pagination-bg-color: #060e1f;
+  --el-pagination-button-disabled-bg-color: #060e1f;
+  --el-pagination-button-color: white;
+  --el-pagination-button-disabled-color: white;
+  color: white;
+  margin-top: 30px;
+  height: 80px;
 }
 </style>

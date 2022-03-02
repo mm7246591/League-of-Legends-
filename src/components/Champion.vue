@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import { computed } from "@vue/runtime-core";
+import { computed } from "vue";
 export default {
   name: "Champion",
   props: ["champions", "character", "input"],
@@ -32,15 +32,15 @@ export default {
     const searchEvent = computed(() => {
       // check input value
       if (props.input.length > 0) {
+        // props.total = props.input.length;
         return props.champions.filter((champion) => champion.name.includes(props.input));
       } // check character
       else if (props.character.length > 0) {
         if (props.character === "全部") {
-          return props.champions;
+          return props.champions.filter((champion) =>
+            champion.character.includes(props.character)
+          );
         }
-        return props.champions.filter((champion) =>
-          champion.character.includes(props.character)
-        );
       }
       return props.champions;
     });
@@ -52,9 +52,10 @@ export default {
 <style scoped>
 .championItems {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: 350px;
   gap: 10px;
   justify-items: center;
 }
@@ -93,5 +94,10 @@ export default {
 }
 .box:hover .text {
   background-color: #006680;
+}
+.el-pagination {
+  text-align: center;
+  --el-pagination-font-size: 20px;
+  --el-pagination-button-height: 20px;
 }
 </style>
