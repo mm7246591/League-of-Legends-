@@ -32,15 +32,15 @@ export default {
     const searchEvent = computed(() => {
       // check input value
       if (props.input.length > 0) {
-        // props.total = props.input.length;
         return props.champions.filter((champion) => champion.name.includes(props.input));
       } // check character
       else if (props.character.length > 0) {
         if (props.character === "全部") {
-          return props.champions.filter((champion) =>
-            champion.character.includes(props.character)
-          );
+          return props.champions;
         }
+        return props.champions.filter((champion) =>
+          champion.character.includes(props.character)
+        );
       }
       return props.champions;
     });
