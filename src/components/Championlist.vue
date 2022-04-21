@@ -110,6 +110,7 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Monoton&family=Noto+Sans+TC:wght@100&family=Noto+Serif+TC:wght@200&display=swap");
 .content {
+  min-height: 100vh;
   max-width: 1300px;
   margin: auto;
   padding-top: 30px;
