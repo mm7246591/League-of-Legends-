@@ -12,9 +12,6 @@
             name: 'Regiondetail',
             params: {
               name: region.name,
-              backgroundImg: region.backgroundImg,
-              icon: region.icon,
-              text: region.text,
             },
           }"
         >
@@ -29,19 +26,23 @@
 </template>
 
 <script>
-import db from "../firebase/firebase";
-import { ref as dref, onValue } from "firebase/database";
 import { ref, onMounted } from "vue";
 export default {
   name: "Championregion",
   setup() {
     const regions = ref([]);
-    onMounted(() => {
-      const getData = dref(db, "regions");
-      onValue(getData, (data) => {
-        regions.value = data.val();
-        localStorage.setItem("regions", JSON.stringify(regions.value));
-      });
+    const getData = async () => {
+      await fetch("data.json")
+        .then((res) => res.json())
+        .then(
+          (data) => (
+            (regions.value = data.regions),
+            localStorage.setItem("regions", JSON.stringify(regions.value))
+          )
+        );
+    };
+    onMounted(async () => {
+      await getData();
     });
     return { regions, onMounted };
   },

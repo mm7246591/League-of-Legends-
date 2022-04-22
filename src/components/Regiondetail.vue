@@ -22,7 +22,7 @@
 import { ref, onMounted } from "vue";
 export default {
   name: "Regiondetail",
-  props: ["name", "backgroundImg", "icon", "text"],
+  props: ["name"],
   setup(props) {
     const regions = ref([]);
     // getItem and filter

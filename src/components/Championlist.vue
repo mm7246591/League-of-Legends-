@@ -56,8 +56,6 @@
   </div>
 </template>
 <script>
-import db from "../firebase/firebase";
-import { ref as dref, onValue } from "firebase/database";
 import { ref, onMounted, computed } from "vue";
 export default {
   name: "Championlist",
@@ -65,11 +63,13 @@ export default {
     const championlist = ref([]);
     const page = ref(1);
     const pageSize = ref(10);
+    const getData = async () => {
+      await fetch("data.json")
+        .then((res) => res.json())
+        .then((data) => (championlist.value = data.championList));
+    };
     onMounted(() => {
-      const getData = dref(db, "championList");
-      onValue(getData, (data) => {
-        championlist.value = data.val();
-      });
+      getData();
     });
     const pageData = computed(() => {
       return championlist.value.slice(

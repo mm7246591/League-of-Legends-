@@ -6,10 +6,7 @@
           :to="{
             name: 'Championdetail',
             params: {
-              origin: champion.origin,
               name: champion.name,
-              text: champion.text,
-              bigImg: champion.bigImg,
             },
           }"
         >

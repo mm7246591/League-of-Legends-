@@ -26,7 +26,7 @@
 import { ref, onMounted } from "vue";
 export default {
   name: "Championdetail",
-  props: ["origin", "name", "text", "bigImg"],
+  props: ["name"],
   setup(props) {
     const champions = ref([]);
     // getItem and filter
