@@ -1,4 +1,4 @@
-#  -:star2: It's about League-of-Legends-illustrated book with vue3.js+firebase 9
+#  -:star2: It's about League-of-Legends-illustrated book with vue3.js
 
 ## Project Setup
 
