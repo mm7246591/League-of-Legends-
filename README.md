@@ -3,8 +3,6 @@
 ## Project Setup
 
 * vue create vue-project
-* npm install firebase
-* create server https://firebase.google.com/
 
 ## Geting started
 * npm run serve
