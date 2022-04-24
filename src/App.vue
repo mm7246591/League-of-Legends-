@@ -1,19 +1,13 @@
 <template>
   <header>
-    <el-menu
-      class="el-menu-demo"
-      mode="horizontal"
-      background-color="#111"
-      text-color="#fff"
-      active-text-color="#ffd04b"
-    >
-      <el-menu-item index="1">
-        <router-link to="/">首頁</router-link>
+    <el-menu class="el-menu-demo" mode="horizontal" background-color="#111">
+      <el-menu-item index="/">
+        <router-link :to="{ name: 'Home' }">首頁</router-link>
       </el-menu-item>
-      <el-menu-item index="2">
+      <el-menu-item index="/list">
         <router-link :to="{ name: 'List' }">英雄列表</router-link>
       </el-menu-item>
-      <el-menu-item index="3"
+      <el-menu-item index="/region"
         ><router-link :to="{ name: 'Region' }">區域</router-link></el-menu-item
       >
     </el-menu>
@@ -33,6 +27,9 @@
   font-family: "Noto Sans TC", sans-serif;
   font-family: "Noto Serif TC", serif;
   font-style: italic;
+  --el-menu-text-color: white;
+  --el-menu-hover-text-color: white;
+  --el-menu-active-color: white;
 }
 .el-sub-menu,
 .el-menu-item {
@@ -49,9 +46,5 @@
 a {
   width: 100%;
   text-decoration: none;
-  color: white;
-}
-.router-link-exact-active {
-  color: yellow;
 }
 </style>
